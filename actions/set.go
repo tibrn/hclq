@@ -7,7 +7,7 @@ import (
 	"strings"
 
 	"github.com/hashicorp/hcl/hcl/token"
-	"github.com/mattolenik/hclq/hclq"
+	"github.com/tibrn/hclq/hclq"
 	"github.com/vektah/gqlparser/ast"
 )
 

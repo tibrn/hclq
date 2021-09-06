@@ -1,4 +1,4 @@
-module github.com/mattolenik/hclq
+module github.com/tibrn/hclq
 
 go 1.12
 

@@ -3,10 +3,11 @@ package cmd
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/mattolenik/hclq/config"
 	"io"
 	"os"
 	"strings"
+
+	"github.com/tibrn/hclq/config"
 )
 
 func getOutput(obj interface{}, raw bool) (string, error) {

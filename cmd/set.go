@@ -9,9 +9,9 @@ import (
 
 	"github.com/hashicorp/hcl/hcl/ast"
 	"github.com/hashicorp/hcl/hcl/token"
-	"github.com/mattolenik/hclq/config"
-	"github.com/mattolenik/hclq/hclq"
 	"github.com/spf13/cobra"
+	"github.com/tibrn/hclq/config"
+	"github.com/tibrn/hclq/hclq"
 )
 
 // SetCmd cobra command

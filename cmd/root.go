@@ -3,8 +3,8 @@ package cmd
 import (
 	"os"
 
-	"github.com/mattolenik/hclq/config"
 	"github.com/spf13/cobra"
+	"github.com/tibrn/hclq/config"
 )
 
 // Set by ldflags -X during build
