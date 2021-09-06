@@ -6,9 +6,9 @@ import (
 	"strconv"
 	"strings"
 
+	"github.com/hashicorp/hcl/hcl/ast"
 	"github.com/hashicorp/hcl/hcl/token"
 	"github.com/tibrn/hclq/hclq"
-	"github.com/vektah/gqlparser/ast"
 )
 
 func Set(reader io.Reader, queryString, newValue string) ([]byte, error) {
