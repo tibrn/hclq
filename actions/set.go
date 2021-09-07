@@ -21,15 +21,15 @@ func Set(filename string, reader io.Reader, queryString, newValue string) ([]byt
 
 	err = doc.Set(queryString,
 		func(list *ast.ListType) error {
-			node, err := hclq.HclFromJSON(newValue)
+			listNode, err := hclq.HclListFromJSON(newValue)
 			if err != nil {
 				return err
 			}
-			list.List = append(node.(*ast.ListType).List, list.List...)
+			list.List = listNode.List
 			return nil
 		}, func(tok *token.Token) error {
-			tok.Text = `"` + newValue + trimToken(tok.Text) + `"`
-			tok.Type = token.STRING
+			tok.Text = `"` + newValue + `"`
+			tok.Type = getTokenType(newValue)
 			return nil
 		})
 	if err != nil {
