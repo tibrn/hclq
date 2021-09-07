@@ -11,9 +11,10 @@ import (
 	"github.com/tibrn/hclq/hclq"
 )
 
-func Set(reader io.Reader, queryString, newValue string) ([]byte, error) {
+func Set(filename string, reader io.Reader, queryString, newValue string) ([]byte, error) {
 
-	doc, err := hclq.FromReader(reader)
+	doc, err := GetDocument(filename, reader)
+
 	if err != nil {
 		return nil, err
 	}
